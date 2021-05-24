@@ -86,14 +86,14 @@ def clic(event):
      pour le deplacement"""
     global detectionPion,choixPion,xDeb,yDeb,gagnant,avertissement
     x1,y1,detectionPion=event.x,event.y,False
-    if avertissement and 0<x1<300 and 70<y1<330: 
+    if avertissement and 0 <x1< 300 and 70 <y1< 330: 
         supprimerMessage()         
-    if tour=="l'humain" and gagnant==-1:
+    if tour == "l'humain" and gagnant == -1:
         for i in range(3):
             [xDeb,yDeb]=canvas.coords(pion1[i])
             if (x1-xDeb)**2+(y1-yDeb)**2<400:#estimation du rayon du pion à 20
                 choixPion=i
-                if start and resteAjouer.count(choixPion)==0 :
+                if start and resteAjouer.count(choixPion)== 0:
                     choixPion=-1
                     break
                 detectionPion=True
@@ -104,10 +104,14 @@ def detection(event):
     de son deplacement"""
     x1,y1=event.x,event.y
     if detectionPion:
-        if x1<0:x1=0
-        if x1>300:x1=300                      
-        if y1<50:y1=50
-        if y1>350:x1=350
+        if x1<0:
+            x1=0
+        if x1>300:
+            x1=300                      
+        if y1<50:
+            y1=50
+        if y1>350:
+            x1=350
         canvas.coords(pion1[choixPion],x1,y1)
 
 def lache_du_pion(event):
@@ -136,8 +140,10 @@ canvas.create_line(150,100,150,300 , fill="white") #ligne droite
 
 for i in range(15):
         xt,yt=i%3*100+50,i//3*100
-        if i<3:yt+=50
-        if i>11:yt-=50
+        if i<3:
+            yt+=50
+        if i>11:
+            yt-=50
         
         canvas.create_oval(xt-7,yt-7,xt+7,yt+7,width=5,fill='black')
         canvas.create_oval(xt-3,yt-3,xt+3,yt+3,width=0,fill='pink')
