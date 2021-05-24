@@ -86,7 +86,8 @@ def clic(event):
      pour le deplacement"""
     global detectionPion,choixPion,xDeb,yDeb,gagnant,avertissement
     x1,y1,detectionPion=event.x,event.y,False
-    if avertissement and 0<x1<300 and 70<y1<330: supprimerMessage()         
+    if avertissement and 0<x1<300 and 70<y1<330: 
+        supprimerMessage()         
     if tour=="l'humain" and gagnant==-1:
         for i in range(3):
             [xDeb,yDeb]=canvas.coords(pion1[i])
