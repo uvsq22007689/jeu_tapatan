@@ -1,7 +1,7 @@
 ########################################################
 # Auteurs:
 # Nabila Elaidoudi
-# Marco Laurent De-Riemacker
+# Marc-Antoine Laurent De-Riemacker
 # Gabriela Da Luz
 # Abdul-Malik Suleiman
 # Camelia Rili
